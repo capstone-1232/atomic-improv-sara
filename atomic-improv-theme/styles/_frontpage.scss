@@ -8,21 +8,21 @@
 }
 
 .full-screen-video-container {
-    // background-image: url('http://atomic-improv-a.web.dmitcapstone.ca/wp-content/themes/atomic-improv-theme/images/atomic-bg.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+  background-image: url('http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/atomic-bg.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .full-screen-video-container img {
-    display: block;
-    margin: 0 auto;
-    width: 50px;
-    height: 50px;
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
 }
 
 .content-flex {
@@ -83,6 +83,15 @@
   box-shadow: 0 0 10px #ffffff;
   margin-top: 2rem;
   margin-bottom: 4rem;
+}
+
+
+
+
+picture {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .section-flex {
@@ -170,20 +179,21 @@ section.socialmedia {
           margin: 1.5rem 0;
         }
 
-        & > div {
+        &>div {
           background: $text-white;
           border-radius: 1rem;
           padding: 0.75rem !important;
-          height:600px;
-          overflow:auto;
+          height: 600px;
+          overflow: auto;
 
           a.sbi_photo {
-            margin-bottom:0.75rem;
+            margin-bottom: 0.75rem;
           }
 
           h3 {
             color: $bg-pattern;
           }
+
           div.cff-visual-header {
             display: none;
           }
@@ -251,6 +261,7 @@ section.socialmedia {
     left: auto;
     padding: 0.25rem 1rem;
   }
+
   .socialflex {
     width: 400px;
     /* padding: 1rem; */
@@ -263,6 +274,7 @@ section.socialmedia {
     display: flex;
     gap: 1.5rem;
     width: 100%;
+
     /* padding: 1rem; */
     section {
       width: 0;

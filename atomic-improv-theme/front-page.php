@@ -8,41 +8,15 @@ get_header();
 ?>
 <main id="primary" class="site-main">
   <section class="frontpage-top">
-    <!-- background video --><?php
-      // Querying the hero image gif using a post.
-      // This makes it easy to switch out in the future.
-      $frontpage_hero_query = new WP_Query(
-        array(
-          "post_type" => "image",
-          "posts_per_page" => 1,
-          "tag" => "frontpage_hero"
-        )
-      );
-      // Testing if the given query has posts via alternate syntax.
-      if ($frontpage_hero_query->have_posts()):
-        // Looping through the posts using alternate syntax.
-        while ($frontpage_hero_query->have_posts()):
-          $frontpage_hero_query->the_post();
-          // Getting image URL.
-          $frontpage_hero_url = get_field("image");
-          ?>
-          <!-- Displaying queried image in img tag. -->
-    <div class="full-screen-video-container" style="background-image: url('<?php echo $frontpage_hero_url; ?>');">      <!-- bg-gif -->
-    <?php
-          // Ending the loop
-        endwhile;
-        // Resetting post data for the next query.
-        wp_reset_postdata();
-        // Moving on.
-      endif;
-      ?>
+    <!-- background video -->
+    <div class="full-screen-video-container">
       <!-- bg content -->
       <div class="content-flex">
         <div class="full-screen-video-content">
-          <img src="http://atomic-improv-a.web.dmitcapstone.ca/wp-content/themes/atomic-improv-theme/images/AIC.png" alt="">
+          <img src="http://atomic-improv-a.web.dmitcapstone.ca/wp-content/themes/atomic-improv-theme/images/AIC.png" alt="A 10 second clip of Edmonton's improv group, Atomic Improv duo, Donovan Workun and Chris Borger!">
           <h1>Atomic <span>Improv</span></h1>
           <p>Canada's premier improv comedy duo</p>
-          <p>Canada's premier improv comedy duo</p>
+          
           <a href="contact-us">Book Now</a>
         </div>
       </div>
@@ -58,25 +32,15 @@ get_header();
         <div class="events">
           <!-- poster -->
           <div class="poster">
-            <?php
-            $frontpage_whatwedo_query = new WP_Query(
-              array(
-                "post_type" => "image",
-                "posts_per_page" => 1,
-                "tag" => "frontpage_whatwedo"
-              )
-            );
-            if ($frontpage_whatwedo_query->have_posts()):
-              while ($frontpage_whatwedo_query->have_posts()):
-                $frontpage_whatwedo_query->the_post();
-                $frontpage_whatwedo_url = get_field("image");
-                ?>
-                <a href="what-we-do"><img src="<?php echo $frontpage_whatwedo_url ?>" alt="Image of Atomic Improv, Donovan Workun and Chris Borger being silly."></a>
-                <?php
-              endwhile;
-              wp_reset_postdata();
-            endif;
-            ?>
+            <picture>
+              <source media="(min-width: 360px)" srcset="http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/donovan-chris-brick-sm.webp">
+              <source media="(min-width: 680px)" srcset="http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/donovan-chris-brick-lg.webp">
+            </picture>
+            <img src="http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/donovan-chris-brick-lg.webp" alt="">
+            <p>testing</p>
+         
+                <a href="what-we-do"></a>
+           
             <div class="section-flex">
               <div class="section-title">
                 <h2>What We Do</h2>

@@ -198,6 +198,7 @@ header .header-flex nav div.menu-navigation-container ul.menu li:last-of-type {
 header .header-flex nav div.menu-navigation-container ul.menu li:last-of-type a:hover {
   -webkit-text-decoration: underline #fffcf5;
           text-decoration: underline #fffcf5;
+  box-shadow: 0 0 10px #cc0033, 0 0 20px #cc0033, 0 0 20px #fffcf5 inset;
 }
 header .header-flex nav.toggled div.menu-navigation-container ul.menu {
   max-height: 25.625rem;
@@ -248,6 +249,7 @@ header .header-flex nav.toggled div.menu-navigation-container ul.menu {
 }
 
 .full-screen-video-container {
+  background-image: url("http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/atomic-bg.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -319,6 +321,12 @@ header .header-flex nav.toggled div.menu-navigation-container ul.menu {
   box-shadow: 0 0 10px #ffffff;
   margin-top: 2rem;
   margin-bottom: 4rem;
+}
+
+picture {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .section-flex {
