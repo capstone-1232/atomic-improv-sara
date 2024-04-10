@@ -18,7 +18,7 @@ get_header();
       </section>
       <section class="get-in-touch">
         <h2>Get in Touch</h2>
-        <?php echo do_shortcode('[forminator_form id="69"]'); ?>
+        <?php echo do_shortcode('[forminator_form id="132"]'); ?>
       </section>
     </div> <!-- .container -->
   </section>
