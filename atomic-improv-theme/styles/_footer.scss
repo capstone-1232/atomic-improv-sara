@@ -5,13 +5,15 @@ footer {
 
   div.footerflex {
     display: flex;
-    justify-content: space-between;
-    align-items:center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
     ul.menu {
       list-style-type: none;
       padding: 0;
       margin: 0;
+      text-align: center;
 
       li {
         a {
@@ -31,17 +33,20 @@ footer {
 
     div.footerlinks {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-end;
-      gap:0.75rem;
-      & > a {
+      gap: 0.75rem;
+      padding-top: 1rem;
+
+      &>a {
         display: block;
         height: 3rem;
-        padding:1rem;
+        padding: 1rem;
 
         &:hover svg {
           background-color: #efcf93;
         }
+
         svg {
           background-color: $orange;
           border-radius: 3rem;
@@ -52,7 +57,7 @@ footer {
 
   div.site-branding {
     padding: 0;
-    margin-top:1.5rem;
+    margin-top: 1.5rem;
 
     a {
       display: block;

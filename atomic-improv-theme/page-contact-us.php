@@ -29,7 +29,3 @@ get_footer();
 
 
 
-/* Validation Check, Please Do Not Remove */
-/*-----------------------------------------
-HTML validated 04/05/24
------------------------------------------*/

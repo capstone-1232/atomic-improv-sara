@@ -13,10 +13,22 @@ get_header();
       <!-- bg content -->
       <div class="content-flex">
         <div class="full-screen-video-content">
-          <img src="http://atomic-improv-a.web.dmitcapstone.ca/wp-content/themes/atomic-improv-theme/images/AIC.png" alt="A 10 second clip of Edmonton's improv group, Atomic Improv duo, Donovan Workun and Chris Borger!">
-          <h1>Atomic <span>Improv</span></h1>
-          <p>Canada's premier improv comedy duo</p>
-          
+          <div class="title-container">
+            <img
+              src="http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/AIC.png"
+              alt="">
+          </div>
+
+          <div class="leaf">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="-2015 -2000 4030 4030">
+              <title>maple leaf from the flag of Canada</title>
+              <path fill="#f00"
+                d="m-90 2030 45-863a95 95 0 0 0-111-98l-859 151 116-320a65 65 0 0 0-20-73l-941-762 212-99a65 65 0 0 0 34-79l-186-572 542 115a65 65 0 0 0 73-38l105-247 423 454a65 65 0 0 0 111-57l-204-1052 327 189a65 65 0 0 0 91-27l332-652 332 652a65 65 0 0 0 91 27l327-189-204 1052a65 65 0 0 0 111 57l423-454 105 247a65 65 0 0 0 73 38l542-115-186 572a65 65 0 0 0 34 79l212 99-941 762a65 65 0 0 0-20 73l116 320-859-151a95 95 0 0 0-111 98l45 863z" />
+            </svg>
+            <p>Improv comedy duo</p>
+          </div>
+
+
           <a href="contact-us">Book Now</a>
         </div>
       </div>
@@ -28,66 +40,42 @@ get_header();
   <section class="what-we-do">
     <div class="container">
       <!-- what we do flex container -->
-      <div class="wwd-flex">
-        <div class="events">
-          <!-- poster -->
-          <div class="poster">
-            <picture>
-              <source media="(min-width: 360px)" srcset="http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/donovan-chris-brick-sm.webp">
-              <source media="(min-width: 680px)" srcset="http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/donovan-chris-brick-lg.webp">
-            </picture>
-            <img src="http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/donovan-chris-brick-lg.webp" alt="">
-            <p>testing</p>
-         
-                <a href="what-we-do"></a>
-           
-            <div class="section-flex">
-              <div class="section-title">
-                <h2>What We Do</h2>
-              </div>
-            </div>
-          </div>
-          <div class="section-content">
-            <h3>Customized shows for your events</h3>
-            <!-- <p>Atomic Improv is Canada's Premier two man Improv troupe that has been
-              creating comedy on the spot based entirely on audience suggestion since 1990.</p>
-            <p>These 3 time World Improv champions and main stage performer at Montreal's just for laughs can help turn
-              your event from humdrum to hilarious!</p>
-            <a href="what-we-do" class="button-style">Learn More</a>
-          </div>
-        </div><!-- end of events section -->
-        <!-- Power Of Yes -->
-        <div class="power-of-yes">
-          <!-- Power of Yes poster-->
-          <h3>Corporate Workshops</h3>
-          <?php
-          $powerofyes_query = new WP_Query(
-            array(
-              "post_type" => "image",
-              "posts_per_page" => 1,
-              "tag" => "powerofyes"
-            )
-          );
-          if ($powerofyes_query->have_posts()):
-            while ($powerofyes_query->have_posts()):
-              $powerofyes_query->the_post();
-              $powerofyes_url = get_field("image");
-              ?>
-              <a href="what-we-do"><img src="<?php echo $powerofyes_url ?>" alt="Poster of 'Power of Yes' workshop with Atomic Improv and Graham Neil"></a>
-              <?php
-            endwhile;
-            wp_reset_postdata();
-          endif;
-          ?>
+      <div class="events">
+        <!-- poster -->
+        <div class="poster">
+          <!-- css background -->
           <div class="section-flex">
-            <div class="section-content">
-              <p>Unlock your teams full potential with the <span class="pos">Power of Yes!</span> our customizable corporate workshop that can help teams
-              boost their creativity and communication skills.</p>
-              <a href="what-we-do#power-of-yes" class="button-style">Learn More</a>
+            <div class="section-title">
+              <h2>What We Do</h2>
             </div>
           </div>
-        </div><!-- end of Power of Yes -->
-      </div><!-- end of flex container -->
+        </div>
+        <div class="section-content">
+          <h3>Customized shows for your events</h3>
+          <p>Atomic Improv is Canada's Premier two man Improv troupe that has been
+            creating comedy on the spot based entirely on audience suggestion since 1990.</p>
+          <p>These 3 time World Improv champions and main stage performer at Montreal's just for laughs can help turn
+            your event from humdrum to hilarious!</p>
+          <a href="what-we-do" class="button-style">Learn More</a>
+        </div>
+      </div><!-- end of events section -->
+      <!-- Power Of Yes -->
+      <div class="power-of-yes">
+        <!-- Power of Yes poster-->
+        <h3>Corporate Workshops</h3>
+        <img
+          src="http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/poy-donovan-grant-md.webp"
+          alt="">
+        <div class="section-flex">
+          <div class="pos-section-content">
+            <p>Unlock your teams full potential with the <span class="pos">Power of Yes!</span> our customizable
+              corporate workshop that can help teams
+              boost their creativity and communication skills.</p>
+            <a href="power-of-yes" class="button-style">Learn More</a>
+          </div>
+        </div>
+      </div><!-- end of Power of Yes -->
+    </div><!-- end of flex container -->
     </div> <!-- end of container -->
   </section><!-- end of What We Do section -->
 
@@ -96,27 +84,8 @@ get_header();
     <div class="container">
       <!-- About poster -->
       <div class="about">
-        <div class="poster">
-          <?php
-          $frontpage_whoweare_query = new WP_Query(
-            array(
-              "post_type" => "image",
-              "posts_per_page" => 1,
-              "tag" => "frontpage_whoweare"
-            )
-          );
-          if ($frontpage_whoweare_query->have_posts()):
-            while ($frontpage_whoweare_query->have_posts()):
-              $frontpage_whoweare_query->the_post();
-              $frontpage_whoweare_url = get_field("image");
-              ?>
-              <a href="who-we-are"><img src="<?php echo $frontpage_whoweare_url ?>" alt="Image of Donovan Workun and Chris Borger being silly."></a>
-            <?php
-            endwhile;
-            wp_reset_postdata();
-          endif;
-          ?>
-          <!-- About content -->
+        <div class="about-poster">
+          <!-- css background -->
           <div class="section-flex">
             <div class="section-title">
               <h2>Who We Are</h2>
@@ -128,7 +97,7 @@ get_header();
             creating comedy on the spot based entirely on audience suggestion since 1990.</p>
           <p>These 3-time World Improv Champions and main stage performer at Montreal's Just For Laughs can help turn
             your event from humdrum to hilarious!</p>
-        <a href="who-we-are" class="button-style">More About Us</a>
+          <a href="who-we-are" class="button-style">More About Us</a>
         </div>
       </div><!-- end of about section -->
 
@@ -143,7 +112,7 @@ get_header();
       <!-- social media title -->
       <div class="social-media-title-container">
         <div class="social-media-title">
-          <h2>#atomicimprov</h2>
+          <!-- <h2>#atomicimprov</h2> -->
         </div>
       </div>
 

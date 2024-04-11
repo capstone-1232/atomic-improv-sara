@@ -13,35 +13,41 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-wrap: wrap;
   max-width: 960px;
   margin: 0 auto;
-  padding: 1.5rem;
-}
-
-img,
-iframe,
-div.social-content > div,
-div.social-content > div > iframe {
-  max-width: 100% !important;
+  padding: 1.5rem 0;
 }
 
 .button-style {
+  margin: 2rem auto;
+  display: block;
+  width: 190px;
+  padding: 1rem;
   font-family: "rift", sans-serif;
+  text-align: center;
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 1.5rem;
   color: #ffffff;
   text-decoration: none;
-  border: 2px solid #AE2012;
+  border: 2px solid #ae2012;
   background-color: #cc0033;
-  box-shadow: 0 0 5px #cc0033;
+  box-shadow: 0 0 10px #cc0033;
   border-radius: 3px;
-  padding: 0.25rem 1rem;
-}
-.button-style:hover {
-  box-shadow: 0 0 10px #cc0033, 0 0 20px #cc0033, 0 0 20px #fffcf5 inset;
+  animation: glowing 1.5s infinite alternate;
 }
 
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 30px #cc0033;
+  }
+  100% {
+    box-shadow: 0 0 50px #cc0033;
+    /* Adjust the glow color and intensity as needed */
+  }
+}
 @font-face {
   font-family: "Rift";
   src: url(http://atomic-improv-a.web.dmitcapstone.ca/wp-content/themes/atomic-improv-theme/fonts/rift-regular.woff);
@@ -77,17 +83,18 @@ h6 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: clamp(4rem, 4vw + 1rem, 6rem);
   line-height: 3rem;
+  color: #f8b556;
+  letter-spacing: 3px;
 }
 h1 span {
-  font-size: 2.5rem;
+  font-size: 0.625em;
   line-height: 1.5rem;
 }
 
-h1,
 .who-we-are h2 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 4vw + 1rem, 4rem);
   line-height: 4.5rem;
   text-align: center;
   text-shadow: 0 0 10px #c97d12;
@@ -95,41 +102,37 @@ h1,
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 3.5vw + 1rem, 3rem);
   line-height: 4.5rem;
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 3vw + 1rem, 2.5rem);
   line-height: 3.75rem;
-}
-
-h3 {
-  font-size: 2rem;
-  line-height: 3rem;
   color: #fffcf5;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2.5vw + 1rem, 1.75rem);
   line-height: 2.25rem;
 }
 
 p {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: clamp(1rem, 2vw + 1rem, 1.25rem);
+  line-height: 1.75rem;
   color: #fffcf5;
+  padding: 1rem;
 }
 
 nav {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw + 1rem, 2rem);
   font-family: "Rift", sans-serif;
   font-weight: bold;
   line-height: 3rem;
 }
 
 .booking-options li {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2vw + 1rem, 1.25rem);
   line-height: 1.875rem;
   color: #fffcf5;
   margin: 1rem;
@@ -137,12 +140,18 @@ nav {
 
 .pos {
   font-weight: 600;
+  color: #fead39;
 }
 
 header .header-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+header .header-flex div.site-branding {
+  padding: 0 1rem;
 }
 header .header-flex div.site-branding a {
   display: block;
@@ -205,7 +214,7 @@ header .header-flex nav.toggled div.menu-navigation-container ul.menu {
   padding: 1.5rem 0;
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 30rem) {
   header {
     border-bottom: 2px solid #cc0033;
   }
@@ -219,11 +228,12 @@ header .header-flex nav.toggled div.menu-navigation-container ul.menu {
     width: unset;
     border-bottom: none;
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
     align-items: center;
+    justify-content: center;
   }
   header .header-flex nav div.menu-navigation-container ul.menu li {
-    text-align: right;
     padding: 0;
   }
   header .header-flex nav div.menu-navigation-container ul.menu li a {
@@ -238,7 +248,6 @@ header .header-flex nav.toggled div.menu-navigation-container ul.menu {
     padding: 0 0.5rem;
   }
   header .header-flex nav.toggled div.menu-navigation-container ul.menu {
-    max-height: 40rem;
     padding: 1.5rem 0;
   }
 }
@@ -257,18 +266,20 @@ header .header-flex nav.toggled div.menu-navigation-container ul.menu {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  padding: 2rem 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .full-screen-video-container img {
   display: block;
   margin: 0 auto;
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 150px;
 }
 
 .content-flex {
-  display: flex;
-  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
 }
 
 .full-screen-video-content {
@@ -280,18 +291,28 @@ header .header-flex nav.toggled div.menu-navigation-container ul.menu {
   text-align: center;
 }
 
+.title-container {
+  width: 300px;
+  margin-bottom: 5rem;
+}
+
 .full-screen-video-content h1 {
-  text-align: center;
-  width: 250px;
+  animation: glow 2s infinite alternate;
 }
 
-.full-screen-video-content span {
-  font-size: 3rem;
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 165, 0, 0.3), 0 0 10px darkorange, 0 0 15px darkorange;
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 165, 0, 0.7), 0 0 5px darkorange, 0 0 10px darkorange;
+  }
 }
-
 .full-screen-video-content p {
   font-weight: 500;
-  text-shadow: 0 0 20px black;
+  text-shadow: 0 0 30px black;
+  color: #fead39;
+  margin: 0;
 }
 
 .full-screen-video-content a {
@@ -305,22 +326,56 @@ header .header-flex nav.toggled div.menu-navigation-container ul.menu {
   background-color: #cc0033;
   box-shadow: 0 0 5px #cc0033;
   border-radius: 3px;
-  padding: 0.25rem 1rem;
+  padding: 0.75rem;
   margin-bottom: 5rem;
+  animation: glowing 1.5s infinite alternate;
 }
 
-.full-screen-video-content a:hover {
-  box-shadow: 0 0 10px #cc0033, 0 0 20px #cc0033, 0 0 20px #fffcf5 inset;
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 20px #cc0033;
+  }
+  100% {
+    box-shadow: 0 0 40px #cc0033;
+    /* Adjust the glow color and intensity as needed */
+  }
+}
+.leaf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 320px;
 }
 
 /* end of bg */
 /* --------main content---------- */
+.events,
+.power-of-yes {
+  margin: 0 auto;
+  width: 640px;
+}
+
 .poster {
+  background-image: url("http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/donovan-chris-brick-med.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
-  border-bottom: 2px solid #ffffff;
-  box-shadow: 0 0 10px #ffffff;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+}
+
+.about-poster {
+  background-image: url("http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/donovan-chris-70s-md.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 400px;
 }
 
 picture {
@@ -343,15 +398,34 @@ picture {
   background-color: #131313;
   top: 90%;
   padding: 0.25rem 1rem;
+  animation: glow 1s infinite alternate;
+  /* Add the glow animation */
 }
 
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #ffffff;
+    /* Initial box shadow */
+  }
+  100% {
+    box-shadow: 0 0 15px #ffffff;
+    /* Glowing box shadow */
+  }
+}
 .section-content {
   max-height: 100%;
   padding-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+.pos-section-content {
+  max-height: 100%;
+  padding-bottom: 1rem;
+  margin-top: 0;
 }
 
 .section-content h3 {
-  margin: 3.5rem auto 0 auto;
+  margin: 4rem auto 0 auto;
   text-align: center;
   max-width: 350px;
 }
@@ -360,7 +434,7 @@ picture {
   margin: 2rem auto;
   display: block;
   width: 190px;
-  padding: 0.25rem;
+  padding: 1rem;
   font-family: "rift", sans-serif;
   text-align: center;
   font-weight: 600;
@@ -372,12 +446,65 @@ picture {
   background-color: #cc0033;
   box-shadow: 0 0 10px #cc0033;
   border-radius: 3px;
+  animation: glowing 1.5s infinite alternate;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 30px #cc0033;
+  }
+  100% {
+    box-shadow: 0 0 50px #cc0033;
+    /* Adjust the glow color and intensity as needed */
+  }
+}
+.power-of-yes img {
+  max-width: 100%;
 }
 
 .power-of-yes h3 {
   margin: 0 auto;
   text-align: center;
   max-width: 350px;
+}
+
+.button-style a {
+  margin: 2rem auto;
+  display: block;
+  width: 190px;
+  padding: 1rem;
+  font-family: "rift", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #ae2012;
+  background-color: #cc0033;
+  box-shadow: 0 0 10px #cc0033;
+  border-radius: 3px;
+  animation: glowing 1.5s infinite alternate;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 30px #cc0033;
+  }
+  100% {
+    box-shadow: 0 0 50px #cc0033;
+    /* Adjust the glow color and intensity as needed */
+  }
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
 }
 
 section.socialmedia div.social-media-title-container div.social-media-title {
@@ -420,63 +547,6 @@ section.socialmedia div.socialflex section div.social-content > div div.cff-visu
   display: none;
 }
 
-@media screen and (min-width: 630px) {
-  .poster {
-    position: relative;
-    border-bottom: none;
-    box-shadow: none;
-    margin: 4rem 0 2rem 0;
-  }
-  .wwd-flex {
-    border-top: 2px solid #fffcf5;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-  }
-  .poster img {
-    width: 400px;
-    margin: 0 auto;
-    display: block;
-  }
-  .section-title:first-of-type {
-    position: absolute;
-    border: 2px solid #ffffff;
-    box-shadow: 0 0 10px #ffffff;
-    border-radius: 3px;
-    background-color: #131313;
-    top: -35%;
-    left: auto;
-    padding: 0.25rem 1rem;
-  }
-  .events,
-  .power-of-yes {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-  .power-of-yes img {
-    margin: 2rem 0;
-  }
-  .about {
-    border-top: 2px solid #fffcf5;
-  }
-  .section-title:last-of-type {
-    position: absolute;
-    border: 2px solid #ffffff;
-    box-shadow: 0 0 10px #ffffff;
-    border-radius: 3px;
-    background-color: #131313;
-    top: -40%;
-    left: auto;
-    padding: 0.25rem 1rem;
-  }
-  .socialflex {
-    width: 400px;
-    /* padding: 1rem; */
-    margin: 0 auto;
-  }
-}
 @media screen and (min-width: 60rem) {
   .socialflex {
     display: flex;
@@ -507,10 +577,6 @@ section.socialmedia div.socialflex section div.social-content > div div.cff-visu
 
 .flex-title h1 {
   padding: 1rem 0;
-}
-
-.events {
-  margin: 3rem 0 2rem 0;
 }
 
 .button a {
@@ -637,13 +703,15 @@ footer {
 }
 footer div.footerflex {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 footer div.footerflex ul.menu {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 footer div.footerflex ul.menu li a {
   color: #fffcf5;
@@ -658,9 +726,10 @@ footer div.footerflex ul.menu li a:hover {
 }
 footer div.footerflex div.footerlinks {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-end;
   gap: 0.75rem;
+  padding-top: 1rem;
 }
 footer div.footerflex div.footerlinks > a {
   display: block;

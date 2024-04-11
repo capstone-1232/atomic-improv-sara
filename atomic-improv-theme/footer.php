@@ -12,7 +12,7 @@
 ?>
 
 <footer id="colophon" class="site-footer">
-  <div class="container">
+  <div class="footer-container">
     <div class="footerflex">
 
       <?php
@@ -24,8 +24,9 @@
       );
       ?>
       <div class="footerlinks">
-        <a href="https://www.facebook.com/AtomicImprov/"><svg fill="#131313" width="3rem" height="3rem" viewBox="0 0 32.00 32.00"
-            xmlns="http://www.w3.org/2000/svg" stroke="#131313" stroke-width="0.00032" transform="rotate(0)">
+        <a href="https://www.facebook.com/AtomicImprov/"><svg fill="#131313" width="3rem" height="3rem"
+            viewBox="0 0 32.00 32.00" xmlns="http://www.w3.org/2000/svg" stroke="#131313" stroke-width="0.00032"
+            transform="rotate(0)">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
               stroke-width="0.384"></g>
@@ -35,8 +36,8 @@
               </path>
             </g>
           </svg></a>
-        <a href="https://www.youtube.com/@donovan725"><svg width="3rem" height="3rem" viewBox="0 0 24.00 24.00" fill="none"
-            xmlns="http://www.w3.org/2000/svg" stroke="#131313" stroke-width="0.00024000000000000003">
+        <a href="https://www.youtube.com/@donovan725"><svg width="3rem" height="3rem" viewBox="0 0 24.00 24.00"
+            fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#131313" stroke-width="0.00024000000000000003">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
@@ -45,8 +46,8 @@
                 fill="#131313"></path>
             </g>
           </svg></a>
-        <a href="https://www.instagram.com/atomicimprov/"><svg fill="#131313" width="3rem" height="3rem" viewBox="0 0 32 32"
-            xmlns="http://www.w3.org/2000/svg" stroke="#131313" stroke-width="0.00032">
+        <a href="https://www.instagram.com/atomicimprov/"><svg fill="#131313" width="3rem" height="3rem"
+            viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#131313" stroke-width="0.00032">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
             <g id="SVGRepo_iconCarrier">
