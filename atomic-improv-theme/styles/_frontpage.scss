@@ -2,12 +2,10 @@
 
 /* -------------frontpage---------- */
 
-/* bg video */
+/* ------------------------------------------------  hero banner */
 .frontpage-top {
   margin-bottom: 2rem;
 }
-
-
 
 .full-screen-video-container {
   background-image: url('http://sparada1.dmitstudent.ca/dmit2590/wp-content/themes/atomic-improv-sara/atomic-improv-theme/images/atomic-bg.gif');
@@ -29,9 +27,7 @@
   height: 150px;
 }
 
-.content-flex {
-  // display: flex;
-  // justify-content: center;
+.hero-card {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
 }
@@ -45,29 +41,9 @@
   text-align: center;
 }
 
-
 .title-container {
   width: 300px;
   margin-bottom: 5rem;
-}
-
-.full-screen-video-content h1 {
-  animation: glow 2s infinite alternate;
-}
-
-
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 5px rgba(255, 165, 0, 0.3),
-      0 0 10px darkorange,
-      0 0 15px darkorange;
-  }
-
-  100% {
-    text-shadow: 0 0 2px rgba(255, 165, 0, 0.7),
-      0 0 5px darkorange,
-      0 0 10px darkorange;
-  }
 }
 
 .full-screen-video-content p {
@@ -84,35 +60,24 @@
   font-size: 1.5rem;
   color: #ffffff;
   text-decoration: none;
-  border: 2px solid #ae2012;
+  border: 2px solid #701209;
   background-color: #cc0033;
   box-shadow: 0 0 5px #cc0033;
   border-radius: 3px;
   padding: 0.75rem;
   margin-bottom: 5rem;
-  animation: glowing 1.5s infinite alternate;
+  animation: glowing 1s infinite alternate;
 }
 
 @keyframes glowing {
   0% {
-    box-shadow: 0 0 20px #cc0033;
+    box-shadow: 0 0 10px #e10038;
   }
 
   100% {
-    box-shadow: 0 0 40px #cc0033;
-    /* Adjust the glow color and intensity as needed */
+    box-shadow: 0 0 80px #e10038;
   }
 }
-
-// .full-screen-video-content a:hover {
-//   box-shadow:
-//     0 0 10px $red,
-//     0 0 20px $red,
-//     0 0 20px $text-white inset;
-// }
-
-
-
 
 .leaf {
   display: flex;
@@ -120,12 +85,7 @@
   align-items: center;
   margin: 0 auto;
   width: 320px;
-
-
 }
-
-
-
 
 /* end of bg */
 /* --------main content---------- */
@@ -156,16 +116,15 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 400px;
-
+  height: 600px;
 }
 
 
-picture {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
+// picture {
+//   display: block;
+//   width: 100%;
+//   text-align: center;
+// }
 
 .section-flex {
   display: flex;
@@ -188,13 +147,11 @@ picture {
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 5px #ffffff;
-    /* Initial box shadow */
+    box-shadow: 0 0 7px #ffffff;
   }
 
   100% {
-    box-shadow: 0 0 15px #ffffff;
-    /* Glowing box shadow */
+    box-shadow: 0 0 25px #ffffff;
   }
 }
 
@@ -202,7 +159,9 @@ picture {
   max-height: 100%;
   padding-bottom: 1rem;
   margin-top: 4rem;
+
 }
+
 
 .pos-section-content {
   max-height: 100%;
@@ -216,37 +175,6 @@ picture {
   max-width: 350px;
 }
 
-.section-content a {
-  margin: 2rem auto;
-  display: block;
-  width: 190px;
-  padding: 1rem;
-  font-family: "rift", sans-serif;
-  text-align: center;
-  font-weight: 600;
-  letter-spacing: 2px;
-  font-size: 1.5rem;
-  color: #ffffff;
-  text-decoration: none;
-  border: 2px solid #ae2012;
-  background-color: #cc0033;
-  box-shadow: 0 0 10px #cc0033;
-  border-radius: 3px;
-  animation: glowing 1.5s infinite alternate;
-}
-
-@keyframes glowing {
-  0% {
-    box-shadow: 0 0 30px #cc0033;
-  }
-
-  100% {
-    box-shadow: 0 0 50px #cc0033;
-    /* Adjust the glow color and intensity as needed */
-  }
-}
-
-
 
 .power-of-yes img {
   max-width: 100%;
@@ -258,36 +186,6 @@ picture {
   margin: 0 auto;
   text-align: center;
   max-width: 350px;
-}
-
-.button-style a {
-  margin: 2rem auto;
-  display: block;
-  width: 190px;
-  padding: 1rem;
-  font-family: "rift", sans-serif;
-  text-align: center;
-  font-weight: 600;
-  letter-spacing: 2px;
-  font-size: 1.5rem;
-  color: #ffffff;
-  text-decoration: none;
-  border: 2px solid #ae2012;
-  background-color: #cc0033;
-  box-shadow: 0 0 10px #cc0033;
-  border-radius: 3px;
-  animation: glowing 1.5s infinite alternate;
-}
-
-@keyframes glowing {
-  0% {
-    box-shadow: 0 0 30px #cc0033;
-  }
-
-  100% {
-    box-shadow: 0 0 50px #cc0033;
-    /* Adjust the glow color and intensity as needed */
-  }
 }
 
 
@@ -303,9 +201,12 @@ picture {
 }
 
 
-
-
 // social media
+
+.social-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
 
 section.socialmedia {
   div.social-media-title-container div.social-media-title {
@@ -330,6 +231,8 @@ section.socialmedia {
   }
 
   div.socialflex {
+    margin: 0 auto;
+
     section {
       div.social-content {
         h3 {
@@ -362,17 +265,18 @@ section.socialmedia {
   }
 }
 
+@media screen and (min-width:680px) {
+  .about-poster {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .section-content p {
+    width: 600px;
+  }
 
 
-
-
-
-
-// @media screen and (min-width: 639px) {
-//   .poster {
-//     height: 600px;
-//   }
-// }
+}
 
 @media screen and (min-width: 60rem) {
   .socialflex {
@@ -385,5 +289,34 @@ section.socialmedia {
       width: 0;
       flex: 1 1 0px;
     }
+  }
+
+  .socialmedia {
+    padding-bottom: 5rem;
+  }
+}
+
+
+@media screen and (min-width:1200px) {
+
+  .frontpage-top {
+    margin-bottom: 10rem;
+  }
+
+  .events {
+    width: 540px;
+  }
+
+  .section-title {
+    top: -150px;
+  }
+
+  .power-of-yes {
+    width: 450px;
+    // margin-top: 22rem;
+  }
+
+  .what-we-do {
+    margin-bottom: 5rem;
   }
 }

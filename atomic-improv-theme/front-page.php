@@ -11,7 +11,7 @@ get_header();
     <!-- background video -->
     <div class="full-screen-video-container">
       <!-- bg content -->
-      <div class="content-flex">
+      <div class="hero-card">
         <div class="full-screen-video-content">
           <div class="title-container">
             <img
@@ -42,6 +42,9 @@ get_header();
       <!-- what we do flex container -->
       <div class="events">
         <!-- poster -->
+
+
+
         <div class="poster">
           <!-- css background -->
           <div class="section-flex">
@@ -107,8 +110,7 @@ get_header();
 
   <!-- social media -->
   <section class="socialmedia">
-    <div class="container">
-
+    <div class="social-container">
       <!-- social media title -->
       <div class="social-media-title-container">
         <div class="social-media-title">
@@ -151,16 +153,3 @@ get_header();
 get_footer();
 
 
-
-
-
-
-
-
-
-
-
-/* Validation Check, Please Do Not Remove */
-/*-----------------------------------------
-HTML validated 04/05/24
------------------------------------------*/

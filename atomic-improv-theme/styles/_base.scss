@@ -25,11 +25,11 @@ body {
 .container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 960px;
+  justify-content: center;
+  max-width: 90rem;
   margin: 0 auto;
   padding: 1.5rem 0;
 }
-
 
 
 
@@ -41,12 +41,11 @@ body {
   font-family: "rift", sans-serif;
   text-align: center;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-size: 1.5rem;
   color: #ffffff;
   text-decoration: none;
   border: 2px solid #ae2012;
-  background-color: #cc0033;
   box-shadow: 0 0 10px #cc0033;
   border-radius: 3px;
   animation: glowing 1.5s infinite alternate;
@@ -54,11 +53,10 @@ body {
 
 @keyframes glowing {
   0% {
-    box-shadow: 0 0 30px #cc0033;
+    box-shadow: 0 0 5px #cc0033;
   }
 
   100% {
-    box-shadow: 0 0 50px #cc0033;
-    /* Adjust the glow color and intensity as needed */
+    box-shadow: 0 0 70px #cc0033;
   }
 }
